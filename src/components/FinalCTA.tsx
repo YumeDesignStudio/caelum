@@ -28,13 +28,13 @@ export default function FinalCTA() {
       <div
         className="absolute inset-0 flex items-center justify-center pointer-events-none"
         aria-hidden
-        style={{ zIndex: 1 }}
+        style={{ zIndex: 0 }}
       >
         <InlineSVG
           src="/assets/caelum_centerpiece.svg"
           fill="#c9a96e"
           width={600}
-          style={{ opacity: 0.07, maxWidth: "600px" }}
+          style={{ opacity: 0.06, maxWidth: "600px", pointerEvents: "none" }}
         />
       </div>
 

@@ -3,10 +3,8 @@ interface GrainOverlayProps {
 }
 
 export default function GrainOverlay({ src }: GrainOverlayProps) {
-  const url =
-    src === "dark"
-      ? "/assets/Pulp_Grain_4.jpg"
-      : "/assets/Pulp_Grain_18.jpg";
+  const isDark = src === "dark";
+  const url = isDark ? "/assets/Pulp_Grain_4.jpg" : "/assets/Pulp_Grain_18.jpg";
 
   return (
     <div
@@ -18,8 +16,8 @@ export default function GrainOverlay({ src }: GrainOverlayProps) {
         zIndex: 1,
         backgroundImage: `url(${url})`,
         backgroundSize: "cover",
-        opacity: 0.04,
-        mixBlendMode: "overlay",
+        opacity: isDark ? 0.06 : 0.08,
+        mixBlendMode: isDark ? "screen" : "multiply",
       }}
     />
   );
