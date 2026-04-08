@@ -16,7 +16,7 @@ export default function GrainOverlay({ src }: GrainOverlayProps) {
         zIndex: 1,
         backgroundImage: `url(${url})`,
         backgroundSize: "cover",
-        opacity: isDark ? 0.06 : 0.08,
+        opacity: 0.08,
         mixBlendMode: isDark ? "screen" : "multiply",
       }}
     />
