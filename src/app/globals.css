@@ -1,63 +1,80 @@
 @import "tailwindcss";
 
 @theme inline {
-  --color-bg: #0a0a0f;
-  --color-text: #f5f0e8;
+  --color-dark: #282828;
+  --color-cream: #e4e2d1;
   --color-gold: #c9a96e;
-  --color-gold-dim: #a07840;
-  --color-surface: #12121a;
-  --color-border: rgba(201, 169, 110, 0.2);
+  --color-dark-card: #333333;
 
   --font-serif: var(--font-cormorant);
-  --font-sans: var(--font-inter);
+  --font-sans: var(--font-montserrat);
 }
 
 html {
-  background-color: #0a0a0f;
-  color: #f5f0e8;
+  scroll-behavior: smooth;
+  background-color: #282828;
 }
 
 body {
-  background-color: #0a0a0f;
-  color: #f5f0e8;
-  font-family: var(--font-inter), system-ui, sans-serif;
+  background-color: #282828;
+  color: #e4e2d1;
+  font-family: var(--font-montserrat), system-ui, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* Gold CTA button */
-.btn-gold {
-  display: inline-block;
+/* ── Pill button ─────────────────────────────────── */
+.btn-pill {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 9999px;
   border: 1px solid #c9a96e;
   color: #c9a96e;
   background: transparent;
-  padding: 0.75rem 2rem;
-  letter-spacing: 0.08em;
-  font-size: 0.8125rem;
+  padding: 0.625rem 1.75rem;
+  font-family: var(--font-montserrat), system-ui, sans-serif;
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
-  transition: background-color 0.3s ease, color 0.3s ease;
+  transition: background-color 0.25s ease, color 0.25s ease;
   cursor: pointer;
+  white-space: nowrap;
 }
 
-.btn-gold:hover {
+.btn-pill:hover {
   background-color: #c9a96e;
-  color: #0a0a0f;
+  color: #282828;
 }
 
-/* Divider line */
-.gold-rule {
-  border: none;
-  border-top: 1px solid rgba(201, 169, 110, 0.2);
+/* ── Grain overlay ───────────────────────────────── */
+.grain-overlay {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background-repeat: repeat;
+  background-size: 320px 320px;
+  opacity: 0.04;
+  z-index: 1;
 }
 
-/* Star twinkle */
+/* ── Section label ───────────────────────────────── */
+.section-label {
+  font-family: var(--font-montserrat), system-ui, sans-serif;
+  font-size: 0.6875rem;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: #c9a96e;
+}
+
+/* ── Star twinkle ────────────────────────────────── */
 @keyframes twinkle {
   0%, 100% { opacity: 1; }
-  50% { opacity: 0.3; }
+  50% { opacity: 0.2; }
 }
 
 @keyframes twinkle-slow {
-  0%, 100% { opacity: 0.7; }
+  0%, 100% { opacity: 0.8; }
   50% { opacity: 0.1; }
 }
 
@@ -67,4 +84,82 @@ body {
 
 .star-twinkle-slow {
   animation: twinkle-slow 7s ease-in-out infinite;
+}
+
+/* ── FAQ accordion ───────────────────────────────── */
+.faq-answer {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 0.35s ease;
+}
+
+.faq-answer.open {
+  grid-template-rows: 1fr;
+}
+
+.faq-answer-inner {
+  overflow: hidden;
+}
+
+/* ── Gold filled button ─────────────────────────── */
+.btn-gold {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 9999px;
+  border: 1px solid #c9a96e;
+  color: #282828;
+  background: #c9a96e;
+  padding: 0.75rem 2rem;
+  font-family: var(--font-montserrat), system-ui, sans-serif;
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  transition: background-color 0.25s ease, color 0.25s ease, border-color 0.25s ease;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.btn-gold:hover {
+  background-color: transparent;
+  color: #c9a96e;
+}
+
+/* ── Pill dark (for cream backgrounds) ──────────── */
+.btn-pill-dark {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 9999px;
+  border: 1px solid #282828;
+  color: #282828;
+  background: transparent;
+  padding: 0.625rem 1.75rem;
+  font-family: var(--font-montserrat), system-ui, sans-serif;
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  transition: background-color 0.25s ease, color 0.25s ease;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.btn-pill-dark:hover {
+  background-color: #282828;
+  color: #e4e2d1;
+}
+
+/* ── Arch card ───────────────────────────────────── */
+.arch-card {
+  border-radius: 9999px 9999px 1rem 1rem;
+  overflow: hidden;
+}
+
+/* ── Section transition fades ───────────────────── */
+.fade-to-dark {
+  background: linear-gradient(to bottom, transparent, #282828);
+}
+
+.fade-to-cream {
+  background: linear-gradient(to bottom, transparent, #e4e2d1);
 }

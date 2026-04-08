@@ -65,8 +65,8 @@ export default function StarField() {
           key={i}
           cx={star.cx}
           cy={star.cy}
-          r={star.r * 0.4}
-          fill="#f5f0e8"
+          r={star.r * 0.25}
+          fill="#c9a96e"
           opacity={star.opacity}
           className={star.slow ? "star-twinkle-slow" : "star-twinkle"}
           style={{ animationDelay: `${(i * 0.37) % 7}s` }}

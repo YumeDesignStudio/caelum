@@ -1,3 +1,5 @@
+import GrainOverlay from "./GrainOverlay";
+
 const plans = [
   {
     name: "Solo Chart",
@@ -22,15 +24,21 @@ export default function Pricing() {
   return (
     <section
       id="pricing"
-      className="py-28 md:py-36"
-      style={{ backgroundColor: "#0d0d14", borderTop: "1px solid rgba(201,169,110,0.08)" }}
+      className="relative py-28 md:py-36 overflow-hidden"
+      style={{ backgroundColor: "#e4e2d1" }}
     >
-      <div className="max-w-5xl mx-auto px-6 lg:px-12">
+      <GrainOverlay src="cream" />
+
+      <div className="relative max-w-5xl mx-auto px-6 lg:px-12" style={{ zIndex: 2 }}>
         {/* Header */}
         <div className="text-center mb-16 flex flex-col items-center gap-6">
           <span
             className="text-xs tracking-[0.25em] uppercase"
-            style={{ color: "#c9a96e" }}
+            style={{
+              fontFamily: "var(--font-montserrat)",
+              color: "#8a7340",
+              letterSpacing: "0.25em",
+            }}
           >
             Pricing
           </span>
@@ -38,7 +46,7 @@ export default function Pricing() {
             className="text-3xl md:text-4xl lg:text-5xl"
             style={{
               fontFamily: "var(--font-cormorant)",
-              color: "#f5f0e8",
+              color: "#282828",
               fontWeight: 400,
               lineHeight: 1.2,
             }}
@@ -55,17 +63,17 @@ export default function Pricing() {
               className="flex flex-col gap-6 p-10"
               style={{
                 border: plan.featured
-                  ? "1px solid rgba(201,169,110,0.5)"
-                  : "1px solid rgba(201,169,110,0.15)",
+                  ? "1px solid rgba(40,40,40,0.5)"
+                  : "1px solid rgba(40,40,40,0.15)",
                 backgroundColor: plan.featured
-                  ? "rgba(201,169,110,0.04)"
+                  ? "rgba(40,40,40,0.04)"
                   : "transparent",
               }}
             >
               {plan.featured && (
                 <span
                   className="text-xs tracking-[0.2em] uppercase self-start"
-                  style={{ color: "#c9a96e" }}
+                  style={{ color: "#8a7340" }}
                 >
                   Most popular
                 </span>
@@ -76,22 +84,22 @@ export default function Pricing() {
                   className="text-2xl mb-2"
                   style={{
                     fontFamily: "var(--font-cormorant)",
-                    color: "#f5f0e8",
+                    color: "#282828",
                     fontWeight: 500,
                   }}
                 >
                   {plan.name}
                 </h3>
-                <p className="text-sm" style={{ color: "rgba(245,240,232,0.45)" }}>
+                <p className="text-sm" style={{ color: "rgba(40,40,40,0.5)" }}>
                   {plan.tagline}
                 </p>
               </div>
 
-              <div className="h-px" style={{ backgroundColor: "rgba(201,169,110,0.15)" }} />
+              <div className="h-px" style={{ backgroundColor: "rgba(40,40,40,0.12)" }} />
 
               <p
                 className="text-sm leading-relaxed flex-1"
-                style={{ color: "rgba(245,240,232,0.55)", lineHeight: 1.85 }}
+                style={{ color: "rgba(40,40,40,0.6)", lineHeight: 1.85 }}
               >
                 {plan.description}
               </p>
@@ -101,18 +109,18 @@ export default function Pricing() {
                   className="text-5xl mb-1"
                   style={{
                     fontFamily: "var(--font-cormorant)",
-                    color: "#f5f0e8",
+                    color: "#282828",
                     fontWeight: 300,
                   }}
                 >
                   {plan.price}
                 </p>
-                <p className="text-xs" style={{ color: "rgba(245,240,232,0.35)" }}>
+                <p className="text-xs" style={{ color: "rgba(40,40,40,0.4)" }}>
                   {plan.includes}
                 </p>
               </div>
 
-              <a href="#" className="btn-gold self-start">
+              <a href="#" className="btn-pill-dark self-start">
                 Begin your reading →
               </a>
             </div>
@@ -122,7 +130,7 @@ export default function Pricing() {
         {/* Small print */}
         <p
           className="text-center mt-10 text-xs"
-          style={{ color: "rgba(245,240,232,0.3)", lineHeight: 1.8 }}
+          style={{ color: "rgba(40,40,40,0.4)", lineHeight: 1.8 }}
         >
           Every reading includes your personal hardcover book as standard. Upgrade to our luxury
           layflat edition for €35 — opens completely flat, premium paper stock, built to last.

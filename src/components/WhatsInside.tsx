@@ -1,3 +1,5 @@
+import GrainOverlay from "./GrainOverlay";
+
 const sections = [
   {
     title: "Your Core Identity",
@@ -29,15 +31,21 @@ export default function WhatsInside() {
   return (
     <section
       id="whats-inside"
-      className="py-28 md:py-36"
-      style={{ backgroundColor: "#0a0a0f", borderTop: "1px solid rgba(201,169,110,0.08)" }}
+      className="relative py-28 md:py-36 overflow-hidden"
+      style={{ backgroundColor: "#e4e2d1" }}
     >
-      <div className="max-w-5xl mx-auto px-6 lg:px-12">
+      <GrainOverlay src="cream" />
+
+      <div className="relative max-w-5xl mx-auto px-6 lg:px-12" style={{ zIndex: 2 }}>
         {/* Header */}
         <div className="text-center mb-6 flex flex-col items-center gap-6">
           <span
             className="text-xs tracking-[0.25em] uppercase"
-            style={{ color: "#c9a96e" }}
+            style={{
+              fontFamily: "var(--font-montserrat)",
+              color: "#8a7340",
+              letterSpacing: "0.25em",
+            }}
           >
             What&apos;s Inside
           </span>
@@ -45,7 +53,7 @@ export default function WhatsInside() {
             className="text-3xl md:text-4xl lg:text-5xl"
             style={{
               fontFamily: "var(--font-cormorant)",
-              color: "#f5f0e8",
+              color: "#282828",
               fontWeight: 400,
               lineHeight: 1.2,
             }}
@@ -54,7 +62,7 @@ export default function WhatsInside() {
           </h2>
           <p
             className="text-base max-w-xl"
-            style={{ color: "rgba(245,240,232,0.55)", lineHeight: 1.85 }}
+            style={{ color: "rgba(40,40,40,0.6)", lineHeight: 1.85 }}
           >
             Your reading covers every significant dimension of your natal chart — organised into
             clear sections, each one building on the last.
@@ -62,19 +70,22 @@ export default function WhatsInside() {
         </div>
 
         {/* Cards grid */}
-        <div className="mt-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-px" style={{ backgroundColor: "rgba(201,169,110,0.1)" }}>
+        <div
+          className="mt-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-px"
+          style={{ backgroundColor: "rgba(40,40,40,0.1)" }}
+        >
           {sections.map((section) => (
             <div
               key={section.title}
               className="p-8 flex flex-col gap-4"
-              style={{ backgroundColor: "#0a0a0f" }}
+              style={{ backgroundColor: "#e4e2d1" }}
             >
-              <div className="w-6 h-px" style={{ backgroundColor: "#c9a96e", opacity: 0.5 }} />
+              <div className="w-6 h-px" style={{ backgroundColor: "#8a7340", opacity: 0.5 }} />
               <h3
                 className="text-lg"
                 style={{
                   fontFamily: "var(--font-cormorant)",
-                  color: "#f5f0e8",
+                  color: "#282828",
                   fontWeight: 500,
                 }}
               >
@@ -82,7 +93,7 @@ export default function WhatsInside() {
               </h3>
               <p
                 className="text-sm leading-relaxed"
-                style={{ color: "rgba(245,240,232,0.5)", lineHeight: 1.85 }}
+                style={{ color: "rgba(40,40,40,0.55)", lineHeight: 1.85 }}
               >
                 {section.body}
               </p>
@@ -95,7 +106,7 @@ export default function WhatsInside() {
           className="text-center mt-14 text-base italic max-w-2xl mx-auto"
           style={{
             fontFamily: "var(--font-cormorant)",
-            color: "rgba(245,240,232,0.45)",
+            color: "rgba(40,40,40,0.5)",
             fontSize: "1.125rem",
             lineHeight: 1.8,
           }}

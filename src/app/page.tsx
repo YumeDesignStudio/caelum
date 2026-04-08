@@ -1,5 +1,6 @@
 import Nav from "@/components/Nav";
 import Hero from "@/components/Hero";
+import Divider from "@/components/Divider";
 import ProductSection from "@/components/ProductSection";
 import HowItWorks from "@/components/HowItWorks";
 import WhatsInside from "@/components/WhatsInside";
@@ -14,10 +15,15 @@ export default function Home() {
       <Nav />
       <main>
         <Hero />
+        <Divider variant={1} bg="dark" />
         <ProductSection />
+        <Divider variant={2} bg="dark" />
         <HowItWorks />
+        <Divider variant={3} bg="cream" />
         <WhatsInside />
+        <Divider variant={1} bg="cream" />
         <Pricing />
+        <Divider variant={2} bg="dark" />
         <FAQ />
         <FinalCTA />
       </main>

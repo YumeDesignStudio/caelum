@@ -1,3 +1,8 @@
+"use client";
+
+import { useState } from "react";
+import GrainOverlay from "./GrainOverlay";
+
 const faqs = [
   {
     q: "Is this a real natal chart or a generic reading?",
@@ -33,27 +38,68 @@ const faqs = [
   },
 ];
 
+function FAQItem({ faq }: { faq: { q: string; a: string } }) {
+  const [open, setOpen] = useState(false);
+
+  return (
+    <div style={{ borderTop: "1px solid rgba(201,169,110,0.1)" }}>
+      <button
+        className="w-full py-7 flex items-center justify-between text-left gap-4"
+        onClick={() => setOpen(!open)}
+        aria-expanded={open}
+      >
+        <h3
+          className="text-lg"
+          style={{
+            fontFamily: "var(--font-cormorant)",
+            color: "#e4e2d1",
+            fontWeight: 500,
+          }}
+        >
+          {faq.q}
+        </h3>
+        <span
+          className="flex-shrink-0 w-5 h-5 flex items-center justify-center text-sm transition-transform duration-300"
+          style={{
+            color: "#c9a96e",
+            transform: open ? "rotate(45deg)" : "none",
+          }}
+        >
+          +
+        </span>
+      </button>
+      <div className={`faq-answer ${open ? "open" : ""}`}>
+        <div className="faq-answer-inner">
+          <p
+            className="text-sm leading-relaxed pb-7"
+            style={{ color: "rgba(228,226,209,0.5)", lineHeight: 1.9 }}
+          >
+            {faq.a}
+          </p>
+        </div>
+      </div>
+    </div>
+  );
+}
+
 export default function FAQ() {
   return (
     <section
       id="faq"
-      className="py-28 md:py-36"
-      style={{ backgroundColor: "#0a0a0f", borderTop: "1px solid rgba(201,169,110,0.08)" }}
+      className="relative py-28 md:py-36 overflow-hidden"
+      style={{ backgroundColor: "#282828" }}
     >
-      <div className="max-w-3xl mx-auto px-6 lg:px-0">
+      <GrainOverlay src="dark" />
+
+      <div className="relative max-w-3xl mx-auto px-6 lg:px-0" style={{ zIndex: 2 }}>
         {/* Header */}
         <div className="text-center mb-16 flex flex-col items-center gap-6">
-          <span
-            className="text-xs tracking-[0.25em] uppercase"
-            style={{ color: "#c9a96e" }}
-          >
-            FAQ
-          </span>
+          <span className="section-label">FAQ</span>
           <h2
             className="text-3xl md:text-4xl lg:text-5xl"
             style={{
               fontFamily: "var(--font-cormorant)",
-              color: "#f5f0e8",
+              color: "#e4e2d1",
               fontWeight: 400,
               lineHeight: 1.2,
             }}
@@ -62,31 +108,10 @@ export default function FAQ() {
           </h2>
         </div>
 
-        {/* FAQ list */}
+        {/* FAQ list — now interactive accordion */}
         <div className="flex flex-col">
           {faqs.map((faq, i) => (
-            <div
-              key={i}
-              className="py-8"
-              style={{ borderTop: "1px solid rgba(201,169,110,0.1)" }}
-            >
-              <h3
-                className="text-lg mb-4"
-                style={{
-                  fontFamily: "var(--font-cormorant)",
-                  color: "#f5f0e8",
-                  fontWeight: 500,
-                }}
-              >
-                {faq.q}
-              </h3>
-              <p
-                className="text-sm leading-relaxed"
-                style={{ color: "rgba(245,240,232,0.5)", lineHeight: 1.9 }}
-              >
-                {faq.a}
-              </p>
-            </div>
+            <FAQItem key={i} faq={faq} />
           ))}
           <div className="h-px" style={{ backgroundColor: "rgba(201,169,110,0.1)" }} />
         </div>
