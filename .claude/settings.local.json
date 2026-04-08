@@ -1,0 +1,15 @@
+{
+  "permissions": {
+    "allow": [
+      "mcp__hostinger-mcp__hosting_listWebsitesV1",
+      "Bash(npx create-next-app@latest:*)",
+      "Bash(gh repo:*)",
+      "Bash(where gh:*)",
+      "Bash(winget install:*)",
+      "Bash(cmd.exe:*)",
+      "Bash(powershell.exe:*)",
+      "Bash(git --version)",
+      "Bash(git config:*)"
+    ]
+  }
+}
