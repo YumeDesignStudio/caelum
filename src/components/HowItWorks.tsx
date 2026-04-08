@@ -48,15 +48,17 @@ export default function HowItWorks() {
           </h2>
         </div>
 
-        {/* Steps */}
-        <div
-          className="flex flex-col md:flex-row gap-0 md:gap-0 divide-y md:divide-y-0 md:divide-x"
-          style={{ borderColor: "rgba(201,169,110,0.12)" }}
-        >
+        {/* Steps as cards */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {steps.map((step) => (
             <div
               key={step.number}
-              className="flex-1 py-10 md:py-0 md:px-10 first:md:pl-0 last:md:pr-0 flex flex-col gap-5"
+              className="flex flex-col gap-5 p-8"
+              style={{
+                backgroundColor: "#333333",
+                border: "1px solid rgba(201,169,110,0.4)",
+                borderRadius: "16px",
+              }}
             >
               <div className="flex items-center gap-4">
                 <InlineSVG src={step.icon} fill="#c9a96e" width={28} aria-hidden />
@@ -83,7 +85,7 @@ export default function HowItWorks() {
               </h3>
               <p
                 className="text-sm leading-relaxed"
-                style={{ color: "rgba(228,226,209,0.55)", lineHeight: 1.85 }}
+                style={{ color: "rgba(228,226,209,0.7)", lineHeight: 1.85 }}
               >
                 {step.body}
               </p>

@@ -62,7 +62,7 @@ export default function WhatsInside() {
           </h2>
           <p
             className="text-base max-w-xl"
-            style={{ color: "rgba(40,40,40,0.6)", lineHeight: 1.85 }}
+            style={{ color: "rgba(40,40,40,0.7)", lineHeight: 1.85 }}
           >
             Your reading covers every significant dimension of your natal chart — organised into
             clear sections, each one building on the last.
@@ -93,7 +93,7 @@ export default function WhatsInside() {
               </h3>
               <p
                 className="text-sm leading-relaxed"
-                style={{ color: "rgba(40,40,40,0.55)", lineHeight: 1.85 }}
+                style={{ color: "rgba(40,40,40,0.65)", lineHeight: 1.85 }}
               >
                 {section.body}
               </p>
@@ -106,7 +106,7 @@ export default function WhatsInside() {
           className="text-center mt-14 text-base italic max-w-2xl mx-auto"
           style={{
             fontFamily: "var(--font-cormorant)",
-            color: "rgba(40,40,40,0.5)",
+            color: "rgba(40,40,40,0.6)",
             fontSize: "1.125rem",
             lineHeight: 1.8,
           }}

@@ -17,7 +17,15 @@
       "Bash(npm run:*)",
       "Bash(git add:*)",
       "Bash(git commit -m 'feat: landing page:*)",
-      "Bash(git push:*)"
+      "Bash(git push:*)",
+      "Bash(cmd /c \"dir C:\\\\Projects\\\\caelum\\\\assets 2>&1\")",
+      "Bash(powershell:*)",
+      "Bash(cp assets/caelum_logo.svg public/assets/)",
+      "Bash(cp assets/caelum_centerpiece.svg public/assets/)",
+      "Bash(cp assets/caelum_divider_1.svg public/assets/)",
+      "Bash(cp assets/caelum_divider_2.svg public/assets/)",
+      "Bash(cp assets/caelum_divider_3.svg public/assets/)",
+      "Bash(npx next:*)"
     ]
   }
 }

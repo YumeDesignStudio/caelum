@@ -11,8 +11,16 @@ export default function GrainOverlay({ src }: GrainOverlayProps) {
   return (
     <div
       aria-hidden="true"
-      className="grain-overlay"
-      style={{ backgroundImage: `url(${url})` }}
+      style={{
+        position: "absolute",
+        inset: 0,
+        pointerEvents: "none",
+        zIndex: 1,
+        backgroundImage: `url(${url})`,
+        backgroundSize: "cover",
+        opacity: 0.04,
+        mixBlendMode: "overlay",
+      }}
     />
   );
 }

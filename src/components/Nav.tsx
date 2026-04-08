@@ -48,9 +48,9 @@ export default function Nav() {
               key={link.href}
               href={link.href}
               className="text-[0.6875rem] tracking-[0.15em] uppercase transition-colors duration-200"
-              style={{ color: "rgba(228,226,209,0.6)", fontFamily: "var(--font-montserrat)" }}
+              style={{ color: "rgba(228,226,209,0.75)", fontFamily: "var(--font-montserrat)" }}
               onMouseEnter={(e) => (e.currentTarget.style.color = "#c9a96e")}
-              onMouseLeave={(e) => (e.currentTarget.style.color = "rgba(228,226,209,0.6)")}
+              onMouseLeave={(e) => (e.currentTarget.style.color = "rgba(228,226,209,0.75)")}
             >
               {link.label}
             </a>
@@ -101,7 +101,7 @@ export default function Nav() {
               key={link.href}
               href={link.href}
               className="text-xs tracking-[0.15em] uppercase"
-              style={{ color: "rgba(228,226,209,0.7)", fontFamily: "var(--font-montserrat)" }}
+              style={{ color: "rgba(228,226,209,0.75)", fontFamily: "var(--font-montserrat)" }}
               onClick={() => setOpen(false)}
             >
               {link.label}

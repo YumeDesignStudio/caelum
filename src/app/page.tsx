@@ -17,9 +17,9 @@ export default function Home() {
         <Hero />
         <Divider variant={1} bg="dark" />
         <ProductSection />
-        <Divider variant={2} bg="dark" />
+        <Divider variant={2} bg="cream" />
         <HowItWorks />
-        <Divider variant={3} bg="cream" />
+        <Divider variant={3} bg="dark" />
         <WhatsInside />
         <Divider variant={1} bg="cream" />
         <Pricing />

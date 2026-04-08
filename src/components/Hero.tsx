@@ -24,8 +24,8 @@ export default function Hero() {
         <InlineSVG
           src="/assets/caelum_centerpiece.svg"
           fill="#c9a96e"
-          width={800}
-          style={{ opacity: 0.15 }}
+          width={600}
+          style={{ opacity: 0.07, maxWidth: "600px" }}
         />
       </div>
 
@@ -55,7 +55,7 @@ export default function Hero() {
           className="text-sm md:text-base max-w-[600px] mx-auto"
           style={{
             fontFamily: "var(--font-montserrat)",
-            color: "rgba(228,226,209,0.65)",
+            color: "rgba(228,226,209,0.75)",
             lineHeight: 1.9,
           }}
         >
@@ -72,7 +72,7 @@ export default function Hero() {
           style={{
             fontFamily: "var(--font-montserrat)",
             fontStyle: "italic",
-            color: "rgba(228,226,209,0.4)",
+            color: "rgba(228,226,209,0.55)",
             lineHeight: 1.8,
           }}
         >

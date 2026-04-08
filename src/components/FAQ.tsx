@@ -72,7 +72,7 @@ function FAQItem({ faq }: { faq: { q: string; a: string } }) {
         <div className="faq-answer-inner">
           <p
             className="text-sm leading-relaxed pb-7"
-            style={{ color: "rgba(228,226,209,0.5)", lineHeight: 1.9 }}
+            style={{ color: "rgba(228,226,209,0.7)", lineHeight: 1.9 }}
           >
             {faq.a}
           </p>
@@ -108,7 +108,7 @@ export default function FAQ() {
           </h2>
         </div>
 
-        {/* FAQ list — now interactive accordion */}
+        {/* FAQ list — interactive accordion */}
         <div className="flex flex-col">
           {faqs.map((faq, i) => (
             <FAQItem key={i} faq={faq} />
