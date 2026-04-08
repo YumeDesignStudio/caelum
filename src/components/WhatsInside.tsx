@@ -40,7 +40,7 @@ export default function WhatsInside() {
         {/* Header */}
         <div className="text-center mb-6 flex flex-col items-center gap-6">
           <span
-            className="text-xs tracking-[0.25em] uppercase"
+            className="text-sm tracking-[0.25em] uppercase"
             style={{
               fontFamily: "var(--font-montserrat)",
               color: "#8a7340",
@@ -61,8 +61,8 @@ export default function WhatsInside() {
             A complete map of who you are.
           </h2>
           <p
-            className="text-base max-w-xl"
-            style={{ color: "rgba(40,40,40,0.7)", lineHeight: 1.85 }}
+            className="text-lg max-w-xl"
+            style={{ color: "rgba(40,40,40,0.75)", lineHeight: 1.85 }}
           >
             Your reading covers every significant dimension of your natal chart — organised into
             clear sections, each one building on the last.
@@ -92,8 +92,8 @@ export default function WhatsInside() {
                 {section.title}
               </h3>
               <p
-                className="text-sm leading-relaxed"
-                style={{ color: "rgba(40,40,40,0.65)", lineHeight: 1.85 }}
+                className="text-base leading-relaxed"
+                style={{ color: "rgba(40,40,40,0.75)", lineHeight: 1.85 }}
               >
                 {section.body}
               </p>
@@ -106,7 +106,7 @@ export default function WhatsInside() {
           className="text-center mt-14 text-base italic max-w-2xl mx-auto"
           style={{
             fontFamily: "var(--font-cormorant)",
-            color: "rgba(40,40,40,0.6)",
+            color: "rgba(40,40,40,0.75)",
             fontSize: "1.125rem",
             lineHeight: 1.8,
           }}

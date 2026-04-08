@@ -13,7 +13,7 @@ export default function ProductSection() {
 
       <div className="relative max-w-3xl mx-auto px-6 lg:px-0 text-center flex flex-col items-center gap-10" style={{ zIndex: 2 }}>
         <span
-          className="text-xs tracking-[0.25em] uppercase"
+          className="text-sm tracking-[0.25em] uppercase"
           style={{
             fontFamily: "var(--font-montserrat)",
             color: "#8a7340",
@@ -39,7 +39,7 @@ export default function ProductSection() {
 
         <p
           className="text-base md:text-lg leading-relaxed"
-          style={{ color: "rgba(40,40,40,0.7)", lineHeight: 1.9 }}
+          style={{ color: "rgba(40,40,40,0.75)", lineHeight: 1.9 }}
         >
           Your Caelum reading covers every dimension of your natal chart — your core identity, your
           emotional nature, how you think, love and act, where you expand and where you are being
@@ -49,7 +49,7 @@ export default function ProductSection() {
 
         <p
           className="text-base md:text-lg leading-relaxed"
-          style={{ color: "rgba(40,40,40,0.7)", lineHeight: 1.9 }}
+          style={{ color: "rgba(40,40,40,0.75)", lineHeight: 1.9 }}
         >
           Delivered as a beautifully designed document — and for every order, printed and bound as
           a hardcover book shipped to your door. Because something this personal deserves to exist

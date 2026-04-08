@@ -20,13 +20,13 @@ export default function Hero() {
       <div
         className="absolute inset-0 flex items-center justify-center pointer-events-none"
         aria-hidden
-        style={{ zIndex: 0 }}
+        style={{ zIndex: 0, opacity: 0.04 }}
       >
         <InlineSVG
           src="/assets/caelum_centerpiece.svg"
           fill="#c9a96e"
           width={600}
-          style={{ opacity: 0.06, maxWidth: "600px", pointerEvents: "none" }}
+          style={{ maxWidth: "600px", pointerEvents: "none" }}
         />
       </div>
 
@@ -53,10 +53,10 @@ export default function Hero() {
 
         {/* Subheadline */}
         <p
-          className="text-sm md:text-base max-w-[600px] mx-auto"
+          className="text-base md:text-lg max-w-[600px] mx-auto"
           style={{
             fontFamily: "var(--font-montserrat)",
-            color: "rgba(228,226,209,0.75)",
+            color: "rgba(228,226,209,0.8)",
             lineHeight: 1.9,
           }}
         >
@@ -69,11 +69,11 @@ export default function Hero() {
 
         {/* Supporting italic */}
         <p
-          className="text-sm max-w-[560px] mx-auto"
+          className="text-base max-w-[560px] mx-auto"
           style={{
             fontFamily: "var(--font-montserrat)",
             fontStyle: "italic",
-            color: "rgba(228,226,209,0.55)",
+            color: "rgba(228,226,209,0.75)",
             lineHeight: 1.8,
           }}
         >

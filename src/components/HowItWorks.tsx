@@ -84,8 +84,8 @@ export default function HowItWorks() {
                 {step.title}
               </h3>
               <p
-                className="text-sm leading-relaxed"
-                style={{ color: "rgba(228,226,209,0.7)", lineHeight: 1.85 }}
+                className="text-base leading-relaxed"
+                style={{ color: "rgba(228,226,209,0.75)", lineHeight: 1.85 }}
               >
                 {step.body}
               </p>

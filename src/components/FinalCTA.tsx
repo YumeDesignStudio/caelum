@@ -28,13 +28,13 @@ export default function FinalCTA() {
       <div
         className="absolute inset-0 flex items-center justify-center pointer-events-none"
         aria-hidden
-        style={{ zIndex: 0 }}
+        style={{ zIndex: 0, opacity: 0.04 }}
       >
         <InlineSVG
           src="/assets/caelum_centerpiece.svg"
           fill="#c9a96e"
           width={600}
-          style={{ opacity: 0.06, maxWidth: "600px", pointerEvents: "none" }}
+          style={{ maxWidth: "600px", pointerEvents: "none" }}
         />
       </div>
 
@@ -60,7 +60,7 @@ export default function FinalCTA() {
           You were born at a particular moment. There is no one else quite like you.
         </h2>
 
-        <p className="text-base" style={{ color: "rgba(228,226,209,0.75)", lineHeight: 1.8 }}>
+        <p className="text-lg" style={{ color: "rgba(228,226,209,0.8)", lineHeight: 1.8 }}>
           Your reading is waiting. It takes less than two minutes to begin.
         </p>
 
@@ -69,8 +69,8 @@ export default function FinalCTA() {
         </a>
 
         <p
-          className="text-sm"
-          style={{ color: "rgba(228,226,209,0.7)", letterSpacing: "0.08em" }}
+          className="text-base"
+          style={{ color: "rgba(228,226,209,0.75)", letterSpacing: "0.08em" }}
         >
           Delivered within 5–10 days. Hardcover book included with every order.
         </p>

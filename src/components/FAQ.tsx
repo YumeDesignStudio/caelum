@@ -71,8 +71,8 @@ function FAQItem({ faq }: { faq: { q: string; a: string } }) {
       <div className={`faq-answer ${open ? "open" : ""}`}>
         <div className="faq-answer-inner">
           <p
-            className="text-sm leading-relaxed pb-7"
-            style={{ color: "rgba(228,226,209,0.7)", lineHeight: 1.9 }}
+            className="text-base leading-relaxed pb-7"
+            style={{ color: "rgba(228,226,209,0.75)", lineHeight: 1.9 }}
           >
             {faq.a}
           </p>

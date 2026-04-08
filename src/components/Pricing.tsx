@@ -75,7 +75,7 @@ export default function Pricing() {
               <div className="px-10 pb-10 flex flex-col gap-6">
                 {plan.featured && (
                   <span
-                    className="text-xs tracking-[0.2em] uppercase self-start"
+                    className="text-sm tracking-[0.2em] uppercase self-start"
                     style={{ color: "#c9a96e" }}
                   >
                     Most popular
@@ -93,7 +93,7 @@ export default function Pricing() {
                   >
                     {plan.name}
                   </h3>
-                  <p className="text-sm" style={{ color: "rgba(228,226,209,0.7)" }}>
+                  <p className="text-base" style={{ color: "rgba(228,226,209,0.75)" }}>
                     {plan.tagline}
                   </p>
                 </div>
@@ -101,8 +101,8 @@ export default function Pricing() {
                 <div className="h-px" style={{ backgroundColor: "rgba(201,169,110,0.15)" }} />
 
                 <p
-                  className="text-sm leading-relaxed flex-1"
-                  style={{ color: "rgba(228,226,209,0.7)", lineHeight: 1.85 }}
+                  className="text-base leading-relaxed flex-1"
+                  style={{ color: "rgba(228,226,209,0.75)", lineHeight: 1.85 }}
                 >
                   {plan.description}
                 </p>
@@ -118,7 +118,7 @@ export default function Pricing() {
                   >
                     {plan.price}
                   </p>
-                  <p className="text-sm" style={{ color: "rgba(228,226,209,0.7)" }}>
+                  <p className="text-base" style={{ color: "rgba(228,226,209,0.75)" }}>
                     {plan.includes}
                   </p>
                 </div>
@@ -133,8 +133,8 @@ export default function Pricing() {
 
         {/* Small print */}
         <p
-          className="text-center mt-10 text-sm"
-          style={{ color: "rgba(228,226,209,0.7)", lineHeight: 1.8 }}
+          className="text-center mt-10 text-base"
+          style={{ color: "rgba(228,226,209,0.75)", lineHeight: 1.8 }}
         >
           Every reading includes your personal hardcover book as standard. Upgrade to our luxury
           layflat edition for €35 — opens completely flat, premium paper stock, built to last.

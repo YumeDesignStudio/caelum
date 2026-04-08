@@ -100,7 +100,7 @@ export default function Nav() {
             <a
               key={link.href}
               href={link.href}
-              className="text-xs tracking-[0.15em] uppercase"
+              className="text-sm tracking-[0.15em] uppercase"
               style={{ color: "rgba(228,226,209,0.75)", fontFamily: "var(--font-montserrat)" }}
               onClick={() => setOpen(false)}
             >

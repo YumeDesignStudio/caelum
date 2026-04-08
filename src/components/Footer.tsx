@@ -32,8 +32,8 @@ export default function Footer() {
             <a
               key={link.label}
               href={link.href}
-              className="text-xs tracking-widest uppercase"
-              style={{ color: "rgba(228,226,209,0.7)", letterSpacing: "0.1em" }}
+              className="text-sm tracking-widest uppercase"
+              style={{ color: "rgba(228,226,209,0.75)", letterSpacing: "0.1em" }}
             >
               {link.label}
             </a>
@@ -45,7 +45,7 @@ export default function Footer() {
           className="text-sm italic"
           style={{
             fontFamily: "var(--font-cormorant)",
-            color: "rgba(228,226,209,0.7)",
+            color: "rgba(228,226,209,0.75)",
             fontSize: "1rem",
           }}
         >
@@ -61,15 +61,15 @@ export default function Footer() {
             <a
               key={link.label}
               href={link.href}
-              className="text-sm"
-              style={{ color: "rgba(228,226,209,0.7)" }}
+              className="text-base"
+              style={{ color: "rgba(228,226,209,0.75)" }}
             >
               {link.label}
             </a>
           ))}
         </div>
 
-        <p className="text-sm" style={{ color: "rgba(228,226,209,0.7)" }}>
+        <p className="text-base" style={{ color: "rgba(228,226,209,0.75)" }}>
           © {new Date().getFullYear()} Caelum. All rights reserved.
         </p>
       </div>
