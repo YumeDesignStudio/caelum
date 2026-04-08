@@ -1,6 +1,5 @@
 import StarField from "./StarField";
 import GrainOverlay from "./GrainOverlay";
-import InlineSVG from "./InlineSVG";
 
 export default function FinalCTA() {
   return (
@@ -28,11 +27,11 @@ export default function FinalCTA() {
       <div
         className="absolute inset-0 flex items-center justify-center pointer-events-none"
         aria-hidden
-        style={{ zIndex: 0, opacity: 0.04 }}
+        style={{ zIndex: 0, opacity: 0.06 }}
       >
-        <InlineSVG
+        <img
           src="/assets/caelum_centerpiece.svg"
-          fill="#c9a96e"
+          alt=""
           width={600}
           style={{ maxWidth: "600px", pointerEvents: "none" }}
         />

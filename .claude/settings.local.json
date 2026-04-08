@@ -25,7 +25,8 @@
       "Bash(cp assets/caelum_divider_1.svg public/assets/)",
       "Bash(cp assets/caelum_divider_2.svg public/assets/)",
       "Bash(cp assets/caelum_divider_3.svg public/assets/)",
-      "Bash(npx next:*)"
+      "Bash(npx next:*)",
+      "Bash(git commit -m ':*)"
     ]
   }
 }
